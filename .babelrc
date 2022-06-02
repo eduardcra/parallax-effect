@@ -1,0 +1,9 @@
+{
+    "presets": [
+        "@babel/preset-env",
+        ["@babel/preset-react", {
+            // al agregar runtima automatic, ya no es necesario importar React en los aarchivos donde se utiliza la sintaxis .jsx
+            "runtime": "automatic"
+        }]
+    ]
+}
