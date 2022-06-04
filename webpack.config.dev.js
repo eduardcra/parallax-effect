@@ -1,7 +1,8 @@
 
 const path = require('path'),
     HtmlWebPackPlugin = require('html-webpack-plugin'),
-    MiniCssExtractPlugin = require('mini-css-extract-plugin');
+    MiniCssExtractPlugin = require('mini-css-extract-plugin'),
+    CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     // El punto de entrada de la aplicación
@@ -48,6 +49,10 @@ module.exports = {
                         loader: 'sass-loader'
                     },
                 ],
+            }, 
+            {
+                test: /\.(png|svg|gif)$/i,
+                type: 'asset/resource'
             }
         ]
     },
@@ -58,6 +63,14 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({
             filename: '[name].css'
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: path.resolve(__dirname, 'src', 'Assets/Images'),
+                    to: 'assets/images'
+                }
+            ]
         })
     ],
     devServer: {
