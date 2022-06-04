@@ -1,0 +1,13 @@
+.app-main-content-container {
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .app-main-content-image {
+        width: 30px;
+        height: 30px;
+        margin: 0 0 0 10px;
+    }
+}
