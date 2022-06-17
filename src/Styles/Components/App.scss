@@ -1,7 +1,18 @@
 .app-main-content {
     width: 100%;
-    height: 100vh;
+    height: 200vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+}
+
+.app-main-content-container {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    .sprite-sheet-section {
+        width: 100%;
+        height: 100vh;
+    }
 }

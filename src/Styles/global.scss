@@ -1,4 +1,8 @@
-$base-color: #c6538c;
+$main-color: #11254A;
+$secondary-color: #966805;
+$third-color: #144196;
+$fourth-color: #144196;
+$font-color: #EAE6FF;
 $color: rgba(black, 0.88);
 $font-base: 'Courier New', Courier, monospace;
 
@@ -13,9 +17,12 @@ p {
 }
 
 body {
-    background-color: $base-color;
+    background-color: $main-color;
     color: $color;
     font-family: $font-base;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 button {

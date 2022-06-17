@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import CoffeeSection from './Sections/CoffeeSection.jsx';
+import SpriteSheetIntro from './Sections/SpriteSheetIntro.jsx';
 import '../Styles/Components/App.scss';
 
 const App = () => {
@@ -16,7 +17,10 @@ const App = () => {
     return (
         <div className='app-main-content'>
             <div className='app-main-content-container'>
-                <CoffeeSection addCounter={addCounter} lowerCounter={lowerCounter} count={count}/>
+                <section className='sprite-sheet-section'>
+                    <SpriteSheetIntro />
+                </section>
+                {/* <CoffeeSection addCounter={addCounter} lowerCounter={lowerCounter} count={count}/> */}
             </div>
         </div>
     );
