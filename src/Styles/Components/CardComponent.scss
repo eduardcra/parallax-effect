@@ -1,0 +1,81 @@
+@import "../utilities.scss";
+
+@mixin display-flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: $card-background;
+    padding: 20px;
+    @include display-flex-column;
+
+    .card-content-image {
+        width: 100%;
+        height: 30%;
+        @include display-flex-column;
+        justify-content: center;
+
+        .card-image {
+            width: 80px;
+            height: 80px;
+        }
+
+        .webpack-card {
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+    .card-content {
+        width: 100%;
+        height: 70%;
+        @include display-flex-column;
+        justify-content: center;
+    }
+
+    &:hover {
+       margin-top: -10px;
+    }
+};
+
+.fade-in-bottom {
+    transition: opacity 2000ms;
+    animation: fade-in-bottom 1s ease-in-out both;
+}
+
+.fade-out-bottom {
+    transition: opacity 2000ms;
+    animation: fade-out-bottom 1s ease-in-out both;
+}
+
+@keyframes fade-in-bottom {
+    0% {
+      -webkit-transform: translateX(1px);
+      transform: translateX(10px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+
+// @keyframes fade-out-bottom {
+//     0% {
+//         -webkit-transform: translateX(0);
+//         transform: translateX(0);
+//         opacity: 1;
+//     }
+
+//     100% {
+//         -webkit-transform: translateX(50px);
+//         transform: translateX(50px);
+//         opacity: 0;
+//     }
+// }
