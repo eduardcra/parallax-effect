@@ -11,11 +11,8 @@ const CardComponent = (props) => {
             const elementTop = componentRef.current.getBoundingClientRect().top,
                 viewportHeight = window.innerHeight;
 
-                console.log('VPH', viewportHeight);
-
             if (elementTop <= viewportHeight) {
-                setComponentInViewport(true);
-                //console.log(props.cardTitle, elementTop, '<', viewportHeight, componentInViewport); 
+                setComponentInViewport(true); 
             } else if (elementTop >= getPercentage(viewportHeight, 75)) {
                 console.log(getPercentage(viewportHeight, 75));
                 setComponentInViewport(false);
