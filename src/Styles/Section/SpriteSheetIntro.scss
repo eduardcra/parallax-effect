@@ -22,7 +22,7 @@
 
         .infiniteAnimation {
             animation-name: sprite;
-            animation-duration: 3.5s;
+            animation-duration: 3s;
             animation-timing-function: steps(16);
             animation-iteration-count: infinite;
         }
@@ -30,6 +30,16 @@
         @keyframes sprite {
             from { background-position: 0px; }
             to { background-position: -8000px; }
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .parallaxContainer {
+        .introSpriteSheet {
+            .spriteImage {
+                transform: scale(0.6);
+            }
         }
     }
 }
