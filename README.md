@@ -9,5 +9,5 @@ npm install
 ## Execution of development environment
 Run dev server and you can see the application running
 ```bash
-npm run dev
+npm run start
 ```
